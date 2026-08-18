@@ -3,34 +3,49 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>KronixAI — Your AI-powered health companion</title>
-<meta name="description" content="KronixAI is an AI health companion that reasons across your sleep, fitness, and nutrition to give you personalized insights." />
+<title>KronixAI — AI health companion for sleep, fitness, and nutrition</title>
+<meta name="description" content="KronixAI is an iOS app that reasons across your sleep, fitness, and nutrition together to give you personalized health insights and coaching." />
 <style>
   :root { --bg:#0b0b0c; --card:#141416; --text:#f5f5f7; --muted:#a1a1aa; --line:rgba(255,255,255,.1); --accent:#22d3ee; }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--text);
-    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
   .wrap { max-width:720px; margin:0 auto; padding:0 20px; }
   header { padding:28px 0; border-bottom:1px solid var(--line); }
   header .wrap { display:flex; align-items:center; justify-content:space-between; }
   .brand { font-size:20px; font-weight:700; letter-spacing:-.02em; }
   nav a { color:var(--muted); text-decoration:none; margin-left:20px; font-size:15px; }
   nav a:hover { color:var(--text); }
-  .hero { padding:72px 0 56px; text-align:center; }
-  .hero h1 { font-size:40px; line-height:1.15; letter-spacing:-.03em; margin:0 0 16px; }
-  .hero p { font-size:18px; color:var(--muted); max-width:520px; margin:0 auto 28px; }
+  .hero { padding:64px 0 40px; text-align:center; }
+  .hero h1 { font-size:52px; line-height:1.1; letter-spacing:-.03em; margin:0 0 12px; }
+  .tagline { font-size:20px; color:var(--text); margin:0 0 16px; }
+  .hero p.lede { font-size:17px; color:var(--muted); max-width:560px; margin:0 auto 26px; }
   .accent { color:var(--accent); }
-  .pills { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:8px 0 0; }
-  .pill { border:1px solid var(--line); border-radius:999px; padding:8px 16px; color:var(--muted); font-size:14px; }
-  .cards { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:8px 0 48px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; text-decoration:none; color:inherit; }
-  .card:hover { border-color:rgba(255,255,255,.25); }
-  .card h3 { margin:0 0 6px; font-size:17px; }
+  .cta { display:inline-block; background:var(--accent); color:#06282e; font-weight:600; font-size:15px;
+    text-decoration:none; padding:12px 24px; border-radius:999px; }
+  .cta:hover { filter:brightness(1.08); }
+  .platform { color:var(--muted); font-size:13px; margin:14px 0 0; }
+  h2 { font-size:22px; letter-spacing:-.01em; margin:44px 0 12px; }
+  h3 { margin:0 0 6px; font-size:17px; }
+  p, li { margin:0 0 12px; }
+  ul { padding-left:22px; color:var(--muted); }
+  li strong { color:var(--text); font-weight:600; }
+  section.block p { color:var(--muted); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 8px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px 22px;
+    text-decoration:none; color:inherit; display:block; }
   .card p { margin:0; color:var(--muted); font-size:14px; }
-  .note { text-align:center; color:var(--muted); font-size:14px; margin:0 0 56px; }
-  footer { border-top:1px solid var(--line); padding:28px 0; color:var(--muted); font-size:13px; text-align:center; }
+  a.card:hover { border-color:rgba(255,255,255,.25); }
+  .callout { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:12px; padding:18px 22px; margin:16px 0 8px; }
+  .callout h3 { margin-top:0; }
+  .callout p, .callout li { color:var(--muted); }
+  .callout p:last-child { margin-bottom:0; }
+  a { color:var(--accent); }
+  footer { border-top:1px solid var(--line); padding:28px 0; color:var(--muted); font-size:13px;
+    text-align:center; margin-top:56px; }
   footer a { color:var(--muted); }
-  @media (max-width:560px){ .cards{ grid-template-columns:1fr; } .hero h1{ font-size:32px; } }
+  @media (max-width:560px){ .grid{ grid-template-columns:1fr; } .hero h1{ font-size:40px; } }
 </style>
 </head>
 <body>
@@ -41,28 +56,96 @@
 
   <main class="wrap">
     <section class="hero">
-      <h1>Your <span class="accent">AI-powered</span> health companion</h1>
-      <p>KronixAI reasons across your sleep, fitness, and nutrition together — turning your data into clear, personalized insights and coaching.</p>
-      <div class="pills">
-        <span class="pill">Sleep</span>
-        <span class="pill">Fitness</span>
-        <span class="pill">Nutrition</span>
-        <span class="pill">Recovery &amp; injuries</span>
+      <h1>KronixAI</h1>
+      <p class="tagline">Your <span class="accent">AI-powered</span> health companion</p>
+      <p class="lede">KronixAI is an iPhone app that brings your sleep, fitness, nutrition, and daily life
+        into one place — and uses AI to reason across all of them together, so the advice you get accounts
+        for your whole picture instead of one isolated metric.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/kronixai/id6780015031">Download on the App Store</a>
+      <p class="platform">iPhone · iOS 15.1 or later · Free to download</p>
+    </section>
+
+    <section class="block">
+      <h2>What KronixAI does</h2>
+      <p>Most health apps track one thing well and leave you to connect the dots. KronixAI is built around
+        the connections: your poor sleep last night, the heavy leg session two days ago, the late dinner,
+        and the flight you took this week are all part of the same story. The app keeps that story in one
+        record and reasons over it.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Sleep</h3>
+          <p>Nightly stages, timing, heart-rate variability, and resting heart rate — with the trends that
+            actually explain how you feel.</p>
+        </div>
+        <div class="card">
+          <h3>Fitness</h3>
+          <p>Workouts, exercises, sets, and activities, with per-exercise history and progress over time.</p>
+        </div>
+        <div class="card">
+          <h3>Nutrition</h3>
+          <p>Meals and macros, logged by text or photo — the AI estimates the numbers so logging isn't a chore.</p>
+        </div>
+        <div class="card">
+          <h3>Recovery &amp; injuries</h3>
+          <p>Injuries, pain check-ins, and rehab guidance that adapts as you recover.</p>
+        </div>
+        <div class="card">
+          <h3>AI coach</h3>
+          <p>Ask questions in plain language, log by chatting, and get a straight answer on whether to train,
+            modify, or rest today.</p>
+        </div>
+        <div class="card">
+          <h3>Daily health scores</h3>
+          <p>A daily read on how you're doing and a longer-term view of where you're trending.</p>
+        </div>
       </div>
     </section>
 
-    <section class="cards">
-      <a class="card" href="support.html">
-        <h3>Support →</h3>
-        <p>Questions, help, and how to manage or delete your data.</p>
-      </a>
-      <a class="card" href="privacy.html">
-        <h3>Privacy Policy →</h3>
-        <p>What we collect, how it's used, and your choices.</p>
-      </a>
+    <section class="block">
+      <h2>How it works</h2>
+      <ul>
+        <li><strong>Connect your data.</strong> Log entries yourself, or connect Apple Health, an Oura Ring,
+          or Google Calendar so your records fill in automatically.</li>
+        <li><strong>The AI reads across everything.</strong> With your explicit consent, the relevant parts of
+          your health record are analyzed together — not one pillar at a time.</li>
+        <li><strong>You get insights and coaching.</strong> Personalized daily insights, health scores, and a
+          chat coach that already knows your history, so you're not re-explaining yourself.</li>
+      </ul>
+      <p>Your data is yours: everything is scoped to your account, nothing is sold or used for advertising,
+        and you can delete your account and all associated data from inside the app at any time.</p>
     </section>
 
-    <p class="note">Coming soon to the App Store · iOS</p>
+    <section class="block">
+      <h2>Connecting Google Calendar</h2>
+      <div class="callout">
+        <h3>Why KronixAI asks for calendar access</h3>
+        <p>Your schedule explains a lot of your health data. A red-eye flight, a dentist appointment, a
+          6&nbsp;a.m. soccer game, or a week of back-to-back dinners all show up in your sleep and training
+          numbers — but only if the app knows they happened.</p>
+        <p>Connecting Google Calendar is <strong>optional and off by default</strong>. When you turn it on,
+          KronixAI requests <strong>read-only</strong> access and uses only your events'
+          <strong>titles and start/end times</strong>. A relevance filter runs first, and only health-relevant
+          events — travel, workouts, appointments, social plans — are saved into your health log so the
+          coach can account for them. Event descriptions, attendees, locations, and attachments are never
+          stored, and KronixAI never creates, edits, or deletes calendar events.</p>
+        <p>You can disconnect at any time in the app. Full details, including our Google API Limited Use
+          commitments, are in the <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Questions?</h2>
+      <div class="grid">
+        <a class="card" href="support.html">
+          <h3>Support →</h3>
+          <p>Help, contact, and how to manage or delete your data.</p>
+        </a>
+        <a class="card" href="privacy.html">
+          <h3>Privacy Policy →</h3>
+          <p>What we collect, how it's used, and your choices.</p>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer><div class="wrap">
