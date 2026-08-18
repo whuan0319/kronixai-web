@@ -38,7 +38,7 @@
 
   <main class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 15, 2026</p>
+    <p class="updated">Last updated: August 18, 2026</p>
 
     <p>KronixAI ("KronixAI," "we," "us," or "our") is an AI-powered personal health and fitness app for iOS. This Privacy Policy explains what information the app collects, how we use it, who we share it with, and the choices and rights you have. By using KronixAI you agree to this policy.</p>
 
@@ -55,6 +55,7 @@
     <p><strong>d) Photos.</strong> If you attach a meal photo for AI food logging, the image is uploaded to our storage and associated with that entry. We access your camera and photo library only when you choose to add a photo.</p>
     <p><strong>e) Limited operational data.</strong> We keep minimal records needed to run and maintain the service (for example, AI token-usage counts for cost monitoring). We do <strong>not</strong> use third-party advertising or cross-app tracking SDKs.</p>
     <p><strong>f) Feedback you submit.</strong> When you send feedback from within the app, we collect the message you write, the category you choose (for example, idea or bug), and basic technical context (app version, release channel, and platform) so we can understand and act on it.</p>
+    <p><strong>g) Google Calendar data (optional).</strong> If you choose to connect Google Calendar, KronixAI receives <strong>read-only</strong> access and uses only your events' <strong>titles and start/end times</strong>. An automated relevance filter runs first, and only health-relevant events (for example travel, workouts, appointments, or social plans) are saved to your health log in minimized form. Event descriptions, attendees, locations, and attachments are never stored, and we never create, modify, or delete calendar events. See Section 6 for our Google API commitments. You can disconnect Google Calendar at any time in the app.</p>
 
     <h2>3. How we use your information</h2>
     <ul>
@@ -68,7 +69,7 @@
 
     <h2>4. AI processing and service providers</h2>
     <p>To power insights and chat, KronixAI sends the relevant portions of your data to <strong>Anthropic PBC</strong> ("Anthropic"), the provider of the Claude AI models, which processes it to generate responses and returns them to the app. Under Anthropic's commercial API terms, your inputs and the outputs are <strong>not used to train Anthropic's models</strong>. Requests are routed through our own secure backend so that credentials are never stored on your device.</p>
-    <p>We send your data to Anthropic only after you have given explicit, in-app consent to AI processing. You can withdraw that consent at any time by deleting your account (<strong>Profile → Delete Account</strong>), which stops any further AI processing and removes your data as described in Section 8.</p>
+    <p>We send your data to Anthropic only after you have given explicit, in-app consent to AI processing. You can withdraw that consent at any time by deleting your account (<strong>Profile → Delete Account</strong>), which stops any further AI processing and removes your data as described in Section 9.</p>
     <p>We also use <strong>Google Firebase</strong> (Google LLC) for authentication, database (Firestore), file storage, and cloud functions. Your data is stored on Google Cloud infrastructure.</p>
     <p>These providers act as our processors/sub-processors and may only use the data to provide their services to us. We do not authorize them to use your health data for their own purposes.</p>
 
@@ -81,10 +82,21 @@
     </ul>
     <p>HealthKit data is used only to power the app's insights and records for you, is tied to your account, and is never stored in iCloud on our behalf.</p>
 
-    <h2>6. How your data is stored and secured</h2>
+    <h2>6. Google Calendar and Google API Limited Use</h2>
+    <p>Google Calendar sync is optional and off by default. When you connect it, KronixAI accesses your calendar through Google's official API with <strong>read-only</strong> permission, solely to auto-capture health-relevant events (travel, workouts, appointments, social plans) into your health log and to give the AI coach context about your schedule — never for advertising, and we never sell it.</p>
+    <p>KronixAI's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the <strong>Limited Use</strong> requirements. In particular:</p>
+    <ul>
+      <li>We use Google Calendar data only to provide user-facing features of KronixAI for you — health logging and AI coaching.</li>
+      <li>We store only the minimized, health-relevant result (an event's title and time, after it passes the relevance filter); raw calendar feeds are not retained.</li>
+      <li>We do not transfer Google Calendar data to third parties except to the service providers in Section 4 as needed to provide these features, to comply with applicable law, or as part of a business transfer with notice.</li>
+      <li>Humans do not read this data unless you give explicit consent, it is necessary for security or to comply with law, or it has been aggregated and anonymized for internal operations.</li>
+    </ul>
+    <p>Disconnecting Google Calendar in the app stops all further access; you can also revoke KronixAI's access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Events already captured remain in your log until you delete them or your account.</p>
+
+    <h2>7. How your data is stored and secured</h2>
     <p>Your data is stored in Google Firebase and is scoped to your account by server-side security rules, so one user cannot access another user's data. Traffic between the app, our backend, and our providers is encrypted in transit (HTTPS/TLS). No method of transmission or storage is 100% secure, but we take reasonable measures to protect your information.</p>
 
-    <h2>7. Sharing</h2>
+    <h2>8. Sharing</h2>
     <p>We share your information only:</p>
     <ul>
       <li>with the service providers in Section 4, to operate the app;</li>
@@ -93,23 +105,23 @@
     </ul>
     <p>We do <strong>not</strong> sell your personal or health information.</p>
 
-    <h2>8. Data retention and deletion</h2>
+    <h2>9. Data retention and deletion</h2>
     <p>We keep your data while your account is active. You can <strong>delete your account and all associated data at any time from within the app</strong>: open <strong>Profile → Delete Account</strong>. This permanently removes your profile, all logged data, your uploaded photos, and your login. Deletion is immediate and cannot be undone. You may also email <a href="mailto:wesleyh93@gmail.com">wesleyh93@gmail.com</a> to request deletion.</p>
     <p>Revoking Apple Health permission (iOS Settings → Health) stops further reads but does not by itself delete data already saved in KronixAI — use Delete Account or remove individual entries in the app for that.</p>
 
-    <h2>9. Your rights</h2>
+    <h2>10. Your rights</h2>
     <p>Depending on where you live, you may have rights to access, correct, export, or delete your personal information, and to object to or restrict certain processing. You can exercise most of these directly in the app (view, edit, and delete entries; delete your account) or by contacting us at <a href="mailto:wesleyh93@gmail.com">wesleyh93@gmail.com</a>. We will respond within the time required by applicable law.</p>
 
-    <h2>10. Children</h2>
+    <h2>11. Children</h2>
     <p>KronixAI is not directed to children under 16 (or the minimum age required in your country), and we do not knowingly collect their information. If you believe a child has provided us data, contact us and we will delete it.</p>
 
-    <h2>11. International users</h2>
+    <h2>12. International users</h2>
     <p>Your information may be processed in the United States and other countries where we or our providers operate, which may have different data-protection laws than your own. By using the app you consent to this processing.</p>
 
-    <h2>12. Changes to this policy</h2>
+    <h2>13. Changes to this policy</h2>
     <p>We may update this policy from time to time. We will revise the "Last updated" date above and, for material changes, provide notice in the app. Continued use after changes means you accept the updated policy.</p>
 
-    <h2>13. Contact</h2>
+    <h2>14. Contact</h2>
     <p>Questions or requests: <a href="mailto:wesleyh93@gmail.com">wesleyh93@gmail.com</a>.</p>
   </main>
 
